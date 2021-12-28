@@ -9,9 +9,11 @@ public class MatrixChain {
 
     public static void main(String[] args) {
         MatrixChain mc = new MatrixChain();
-        int n = 7;
+//        int n = 7;
+        int n = 6;
 //        int[] p = {30, 35, 15, 5, 10, 20, 25};
-        int[] p = {5, 10, 3, 12, 5, 50, 6};
+//        int[] p = {25, 15, 20, 5, 10, 20, 35};
+        int[] p = {5, 10, 3, 12, 5, 50};
         int[][] m = new int[n][n];
         int[][] s = new int[n][n];
         mc.matrixChain(p, m, s);
@@ -30,12 +32,13 @@ public class MatrixChain {
             System.out.println();
         }
 
-        mc.traceback(s, 1, 6);
+//        mc.traceback(s, 1, 6);
+        mc.traceback(s, 1, 5);
     }
 
     public void matrixChain(int[] p, int[][] m, int[][] s) {
         int n = p.length - 1;
-        System.out.println("matrixChain里n的值为"+n);
+        System.out.println("matrixChain里n的值为" + n);
 
         for (int i = 1; i <= n; i++) {
             m[i][i] = 0;
